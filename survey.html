@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="David Vidal">
+    <link rel="stylesheet" href="CSS/survey_styles.css">
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <section class="container">
+      <header class="header">
+        <h1 id="title" class="text-center">Basic Survey Form</h1>
+        <p id="description" class="description text-center">
+          Thank you for taking the time to help me improve my portfolio
+        </p>
+      </header>
+      <form id="survey-form">
+        <section class="form-group">
+          <label id="name-label" for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="Enter your name"
+            required
+          />
+        </section>
+        <section class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter your Email"
+            required
+          />
+        </section>
+        <section class="form-group">
+          <label id="number-label" for="number">
+            Age
+            <span class="clue">(optional)</span>
+          </label>
+          <input
+            type="number"
+            name="age"
+            id="number"
+            min="10"
+            max="99"
+            class="form-control"
+            placeholder="Age"
+          />
+        </section>
+        <section class="form-group">
+          <p>Which option best describes your current offer?</p>
+          <select id="dropdown" name="role" class="form-control" required>
+            <option disabled selected value>Select current offer</option>
+            <option value="student">Career</option>
+            <option value="job">Full Time Job</option>
+            <option value="part-time">Part Time Job</option>
+            <option value="preferNo">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+        </section>
+
+        <section class="form-group">
+          <p>Would you recommend this programmer to a friend?</p>
+          <label>
+            <input
+              name="user-recommend"
+              value="definitely"
+              type="radio"
+              class="input-radio"
+              checked/>
+              Definitely
+            </label>
+          <label>
+            <input
+              name="user-recommend"
+              value="maybe"
+              type="radio"
+              class="input-radio"/>
+              Maybe
+          </label>
+
+          <label>
+            <input
+              name="user-recommend"
+              value="not-sure"
+              type="radio"
+              class="input-radio"/>
+              Not sure
+          </label>
+        </section>
+
+        <section class="form-group">
+          <p>
+            What's your favorite project from David?
+          </p>
+          <select id="most-like" name="Favorites" class="form-control" required>
+            <option disabled selected value>Select an option</option>
+            <option value="portfolio">Portfolio</option>
+            <option value="survey-form">Survey Form</option>
+            <option value="product-page">Product landing page</option>
+            <option value="technical-documentation">Technical documentation page</option>
+          </select>
+        </section>
+
+        <section class="form-group">
+          <p>
+            What would you like to see improved?
+            <span class="clue">(Check all that apply)</span>
+          </p>
+
+          <label>
+            <input
+              name="prefer"
+              value="front-end-projects"
+              type="checkbox"
+              class="input-checkbox"/>
+              Front-end Projects
+          </label>
+
+          <label>
+            <input
+              name="prefer"
+              value="back-end-projects"
+              type="checkbox"
+              class="input-checkbox"/>
+              Back-end Projects
+          </label>
+
+          <label>
+            <input
+              name="prefer"
+              value="data-visualization"
+              type="checkbox"
+              class="input-checkbox"/>
+              Data Visualization
+          </label>
+
+          <label>
+            <input
+              name="prefer"
+              value="customer-service"
+              type="checkbox"
+              class="input-checkbox"/>
+              Customer Service
+          </label>
+        </section>
+
+        <section class="form-group">
+          <p>Any comments or suggestions?</p>
+          <textarea
+            id="comments"
+            class="input-textarea"
+            name="comment"
+            placeholder="Enter your comment here...">
+          </textarea>
+        </section>
+
+        <footer class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </footer>
+      </form>
+    </section>
+  </body>
+</html>
